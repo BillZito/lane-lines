@@ -7,6 +7,7 @@ Given an image of a road, I identify the lane lines and draw them on in real-tim
 All made possible by Udacity's Self-driving Car Nanodegree.
 
 Steps:
+
 1. Detect the line segments in the image (canny edge detection) 
 1. Crop the photo to just the part that may contain lane lines
 1. Average/extrapolate the vertical lines (hough transformation)
