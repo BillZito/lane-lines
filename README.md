@@ -1,21 +1,25 @@
 #**Finding Lane Lines on the Road** 
 <img src="laneLines_thirdPass.jpg" width="480" alt="Combined Image" />
 
-When we drive, we use our eyes to decide where to go.  The lines on the road that show us where the lanes are act as our constant reference for where to steer the vehicle.  Naturally, one of the first things we would like to do in developing a self-driving car is to automatically detect lane lines using an algorithm.
+## Overview ##
+Given an image of a road, I identify the lane lines and draw them on in real-time videos. 
 
-In this project you will detect lane lines in images using Python and OpenCV.  OpenCV means "Open-Source Computer Vision", which is a package that has many useful tools for analyzing images.  
+All made possible by Udacity's Self-driving Car Nanodegree.
 
+Steps:
+1. Detect the line segments in the image (canny edge detection) 
+1. Crop the photo to just the part that may contain lane lines
+1. Average/extrapolate the vertical lines (hough transformation)
+1. Draw the lines onto the image for display.
+
+## Files ##
+1. P1.ipynb: contains all the image processing and output videos
+1. white.mp4 and yellow.mp4 are the output videos after finding lane lines
+
+## To get the code working for you ##
 **Step 1:** Getting setup with Python
 
 To do this project, you will need Python 3 along with the numpy, matplotlib, and OpenCV libraries, as well as Jupyter Notebook installed. 
-
-We recommend downloading and installing the Anaconda Python 3 distribution from Continuum Analytics because it comes prepackaged with many of the Python dependencies you will need for this and future projects, makes it easy to install OpenCV, and includes Jupyter Notebook.  Beyond that, it is one of the most common Python distributions used in data analytics and machine learning, so a great choice if you're getting started in the field.
-
-Choose the appropriate Python 3 Anaconda install package for your operating system <A HREF="https://www.continuum.io/downloads" target="_blank">here</A>.   Download and install the package.
-
-If you already have Anaconda for Python 2 installed, you can create a separate environment for Python 3 and all the appropriate dependencies with the following command:
-
-`>  conda create --name=yourNewEnvironment python=3 anaconda`
 
 `>  source activate yourNewEnvironment`
 
@@ -43,9 +47,7 @@ then to test if OpenCV is installed correctly:
 (Ctrl-d to exit Python)
 
 **Step 3:** Installing moviepy  
-
-We recommend the "moviepy" package for processing video in this project (though you're welcome to use other packages if you prefer).  
-
+wxx
 To install moviepy run:
 
 `>pip install moviepy`  
